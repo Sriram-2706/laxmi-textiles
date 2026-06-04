@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/laxmi-textiles">
+
         <Routes>
           <Route path="/" element={<Login setUser={setUser} />} />
           <Route path="/staff" element={user?.role === 'staff' ? <StaffDashboard user={user} /> : <Navigate to="/" />} />
